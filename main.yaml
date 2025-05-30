@@ -2,6 +2,10 @@
   before_script:
     - echo "Hello Gitlab! 1"
 
-.test2:
+.check-runner-status:
+  image: python:3.13
   before_script:
-    - echo "Hello Gitlab! 2"
+    - pip install requests
+    - curl -O https://raw.githubusercontent.com/my-org/gitlab-ci-library/main/check_runner.py
+  script:
+    - python3 check_runner.py
