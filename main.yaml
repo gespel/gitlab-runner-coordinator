@@ -6,6 +6,6 @@
   image: python:3.13
   before_script:
     - pip install requests
-    - curl -O https://raw.githubusercontent.com/my-org/gitlab-ci-library/main/check_runner.py
+    - curl -O https://raw.githubusercontent.com/gespel/gitlab-runner-coordinator/refs/heads/main/check_runner.py
   script:
     - python3 check_runner.py
