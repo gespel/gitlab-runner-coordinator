@@ -1,3 +1,7 @@
 .gitlab-runner-coordinator:test:
-  before_script:
-    - echo "Hello Gitlab!"
+  script::
+    - echo "Hello Gitlab! 1"
+
+.gitlab-runner-coordinator:test2:
+  script::
+    - echo "Hello Gitlab! 2"
