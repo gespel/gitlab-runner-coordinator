@@ -1,7 +1,7 @@
 .test:
-  script::
+  script:
     - echo "Hello Gitlab! 1"
 
 .test2:
-  script::
+  script:
     - echo "Hello Gitlab! 2"
