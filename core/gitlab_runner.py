@@ -2,7 +2,7 @@ class GitlabRunner:
     def __init__(self, name, address):
         self.name = name
         self.address = address
-        self.status = "off"
+        self.status = "stopped"
 
     def to_dict(self):
         return {
