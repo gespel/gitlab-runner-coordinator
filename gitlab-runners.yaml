@@ -1,0 +1,6 @@
+runners:
+  - name: runner1
+    address: vm-gitlab-runner
+  - name: runner2
+    address: vm-gitlab-runner2
+
