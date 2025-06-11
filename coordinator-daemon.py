@@ -1,9 +1,6 @@
 import requests
 import os
 
-from ansible_collections.awx.awx.plugins.modules.workflow_job_template import response
-
-
 class CoordinatorDaemon:
     def __init__(self):
         self.api_token = os.environ["GITLAB_API_TOKEN"]
