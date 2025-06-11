@@ -36,4 +36,4 @@ cd = CoordinatorDaemon()
 cd.fetch_runners()
 for runner in cd.runners:
     jobs = cd.get_num_jobs_from_runner(runner["id"])
-    print(f"Current number of jobs on {runner["id"]}: {len(jobs)}")
+    print(f"Current number of jobs on {runner['id']}: {len(jobs)}")
