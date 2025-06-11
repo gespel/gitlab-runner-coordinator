@@ -56,5 +56,5 @@ cd = CoordinatorDaemon()
 for r in cd.get_runners():
     print(f"VM-name: {cd.get_vm_name(r['id'])}")
     print(f"Number of active jobs: {cd.get_num_jobs(r['id'])}")
-    if cd.get_num_jobs(r["id"]) == 0:
+    if cd.get_num_jobs(r["id"]) == 0 and cd.get_vm_name(r["id"]) is not None:
         print(f"No active jobs for {r['id']}. Shutting down {cd.get_vm_name(r['id'])}.")
