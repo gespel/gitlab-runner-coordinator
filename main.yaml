@@ -1,4 +1,4 @@
 .check_build_runner:
   script:
     - echo "Checking if port 22 is reachable on "$BUILD_RUNNER" host..."
-    - if nc -zv vm-gitlab-runner 22 2>&1 | grep -q 'succeeded'; then echo "Port 22 is reachable."; else echo "Port 22 is NOT reachable."; fi
+    - if nc -zv "$BUILD_RUNNER" 22 2>&1 | grep -q 'succeeded'; then echo "Port 22 is reachable."; else echo "Port 22 is NOT reachable."; fi
