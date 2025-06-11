@@ -36,8 +36,9 @@ class CoordinatorDaemon:
         if response.status_code == 200:
             jobs = response.json()
             for job in jobs:
-                pprint.pprint(job)
-            out = jobs
+                if job["status"] == "running":
+                    out.append(job)
+                #pprint.pprint(job)
         else:
             print(f"Fehler: {response.status_code} - {response.text}")
         return len(out)
