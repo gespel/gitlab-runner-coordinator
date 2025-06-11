@@ -1,11 +1,3 @@
-.test:
+.check_build_runner:
   before_script:
     - echo "Hello Gitlab! 1"
-
-.check-runner-status:
-  image: python:3.13
-  before_script:
-    - pip install requests
-    - curl -O https://raw.githubusercontent.com/gespel/gitlab-runner-coordinator/refs/heads/main/check_runner.py
-  script:
-    - python3 check_runner.py
