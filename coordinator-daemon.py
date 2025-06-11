@@ -54,5 +54,5 @@ class CoordinatorDaemon:
 
 cd = CoordinatorDaemon()
 for r in cd.get_runners():
-    print(f"VM-name: {cd.get_vm_name(r["id"])}")
-    print(f"Number of active jobs: {cd.get_num_jobs(r["id"])}")
+    print(f"VM-name: {cd.get_vm_name(r['id'])}")
+    print(f"Number of active jobs: {cd.get_num_jobs(r['id'])}")
