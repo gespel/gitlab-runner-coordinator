@@ -12,6 +12,7 @@ class CoordinatorDaemon:
         }
         self.runner_ids = []
         self.runners = []
+        self.fetch_runner_ids()
 
     def fetch_runner_ids(self):
         response = requests.get("https://gitlab.com/api/v4/projects/70726275/runners", headers=self.headers)
@@ -50,7 +51,6 @@ class CoordinatorDaemon:
         return None
 
 cd = CoordinatorDaemon()
-cd.fetch_runner_ids()
 for r in cd.get_runners():
-    print(cd.get_vm_name(r["id"]))
-    print(cd.get_num_jobs(r["id"]))
+    print(f"VM-name: {cd.get_vm_name(r["id"])}")
+    print(f"Number of active jobs: {cd.get_num_jobs(r["id"])}")
