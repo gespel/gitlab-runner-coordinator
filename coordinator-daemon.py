@@ -1,3 +1,5 @@
+import pprint
+
 import requests
 import os
 
@@ -34,7 +36,7 @@ class CoordinatorDaemon:
         if response.status_code == 200:
             jobs = response.json()
             for job in jobs:
-                print(job)
+                pprint.pprint(job)
             out = jobs
         else:
             print(f"Fehler: {response.status_code} - {response.text}")
