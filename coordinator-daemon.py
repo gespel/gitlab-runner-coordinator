@@ -40,7 +40,7 @@ class CoordinatorDaemon:
                     out.append(job)
                 #pprint.pprint(job)
         else:
-            print(f"Fehler: {response.status_code} - {response.text}")
+            print(f"Error: {response.status_code} - {response.text}")
         return len(out)
 
     def get_vm_name(self, runner_id):
