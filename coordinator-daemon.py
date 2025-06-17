@@ -52,6 +52,13 @@ class CoordinatorDaemon:
                         return s[1]
         return None
 
+    def shutdown_vm(self, runner_id):
+        import subprocess
+        out = subprocess.run(["gcloud", "compute", "instances", "stop", self.get_vm_name(runner_id)])
+        out = str(out)
+        print(out)
+
+
 cd = CoordinatorDaemon()
 for r in cd.get_runners():
     print(f"VM-name: {cd.get_vm_name(r['id'])}")
