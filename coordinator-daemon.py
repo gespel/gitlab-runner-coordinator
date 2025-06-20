@@ -55,8 +55,7 @@ class CoordinatorDaemon:
     def shutdown_vm(self, runner_id):
         import subprocess
         out = subprocess.run(["gcloud", "compute", "instances", "stop", self.get_vm_name(runner_id), "--zone=europe-west3-a"])
-        out = str(out)
-        print(out)
+        print(str(out))
 
 
 cd = CoordinatorDaemon()
