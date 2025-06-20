@@ -65,4 +65,4 @@ for r in cd.get_runners():
     print(f"Number of active jobs: {cd.get_num_jobs(r['id'])}")
     if cd.get_num_jobs(r["id"]) == 0 and cd.get_vm_name(r["id"]) is not None:
         print(f"No active jobs for {r['id']}. Shutting down {cd.get_vm_name(r['id'])}.")
-        cd.shutdown_vm(r["id"])
+        #cd.shutdown_vm(r["id"])
